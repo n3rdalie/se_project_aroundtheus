@@ -17,6 +17,13 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1100px) {
+    .page__section {
+        margin: 0 20px;
+        max-width: calc(100% - 40px);
+    }
+}
+
 .header{ 
     margin-top: 45px;
 }
@@ -57,7 +64,11 @@
     line-height: 48px;
     font-weight: 500px;
     grid-area: title;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     margin: 0;
+
     }
 
 .profile__description {
@@ -92,13 +103,12 @@ padding: 0;
 margin: 0;
 
 
-
-
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     border-radius: 10px;
     
     
@@ -106,6 +116,7 @@ margin: 0;
 }
 
 .card__image {
+    display: flex;
     width: 282px;
     height: 282px;
 
@@ -131,4 +142,28 @@ margin: 0;
     width: 21px;
     height: 18px;
     border: none;
+
+}
+
+@media screen and (max-width:480px) {
+.profile {
+    flex-direction: column;
+ 
+}
+.profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    
+}
+.profile__description {
+    width: 100%;
+    text-align: center;
+
+}
+.profile__add-button {
+    margin: 0;
+    width: 100%;
+}
 }
