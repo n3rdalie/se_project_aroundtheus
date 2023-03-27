@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("Inter-Black.woff2?v=3.19") format("woff2"),
+         url("Inter-Black.woff?v=3.19") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
+         url("Inter-Regular.woff?v=3.19") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("Inter-Medium.woff2?v=3.19") format("woff2"),
+         url("Inter-Medium.woff?v=3.19") format("woff");
+  }
+
 .page {
     background-color: #000;
     color: #fff;
@@ -60,9 +87,10 @@
 }
 
 .profile__title {
+    font-family: 'Inter';
     font-size: 42px;
     line-height: 48px;
-    font-weight: 500px;
+    font-weight: 500;
     grid-area: title;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -76,6 +104,9 @@
     line-height: 22px;
     font-weight: 400;
     grid-area: description;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     margin: 0;
 }
 
@@ -89,7 +120,10 @@
 }
 
 .cards {
-   /* fonts */
+   font-family: 'Inter';
+   font-size: 24px;
+   font-weight: 900;
+   line-height: 29px;
    margin-top: 47px;
 }
 
@@ -132,8 +166,9 @@ margin: 0;
     padding-right: 20px;
     align-items: center;
     justify-content: space-between;
-
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
 }
 
