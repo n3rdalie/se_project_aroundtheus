@@ -12,16 +12,8 @@
 
 .page__section {
     max-width: 880px;
-    width: 100%;
     position: relative;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 20px 0 20px;
 }
 
-@media screen and (max-width: 880px) {
-    .page__section {
-        margin: 0 20px;
-        max-width: calc(100% - 40px);
-
-    }
-}
