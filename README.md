@@ -17,6 +17,8 @@ The Around the US webpage is the third project in the Software Engineer program 
 - Grid Layout
 - Adapative Web Design
 
+- [Link to GitHub Pages](https://n3rdalie.github.io/se_project_aroundtheus/)
+
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
@@ -26,3 +28,4 @@ The Around the US webpage is the third project in the Software Engineer program 
 ![Main Page](./images/MAIN%20PAGE.png)
 ![Mobile Page](./images/MOBILE.png)
 ![Sprint 3 Project](./images/Sprint%203_%20Around%20the%20US.jpg)
+
