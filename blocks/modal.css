@@ -7,12 +7,12 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     /*display: flex;*/
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     display: none;
 
 }
 
-.modal__opened {
+.modal_opened {
     display: flex;
 }
 
@@ -63,8 +63,8 @@
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
     color: #fff;
     background: #000;
@@ -97,12 +97,14 @@
     opacity: 0.6;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 570px) {
     .modal__container {
         margin-top: 123px;
-        width: 282px;
-        padding-left: 22px;
-        padding-right: 22px;
+        max-width: 282px;
+        margin-right: 19px;
+        margin-left: 19px;
+        /*padding-left: 22px;
+        padding-right: 22px;*/
     }
 
     .modal__heading {
@@ -126,5 +128,6 @@
         bottom: calc(100% + 14px);
         height: 26px;
         width: 26px;
+        
     }
 }
