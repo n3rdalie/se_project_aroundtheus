@@ -97,7 +97,7 @@
     opacity: 0.6;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 620px) {
     .modal__container {
         margin-top: 123px;
         max-width: 282px;
@@ -124,7 +124,7 @@
     }
 
     .modal__close {
-        left: calc(100% - 30px);
+        left: calc(100% - 26px);
         bottom: calc(100% + 14px);
         height: 26px;
         width: 26px;
