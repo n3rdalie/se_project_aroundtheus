@@ -43,6 +43,7 @@
         <p class="footer__copyright">© 2023 Around The U.S. Natalie Silva</p>
       </footer>
     </div>
+    <!--- Edit Modal-->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -53,14 +54,14 @@
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form">
           <input
-            class="modal__input"
-            name="title"
+            class="modal__input modal__input_type_name"
+            name="name"
             id="profile-title-input"
             placeholder="Name"
             type="text"
           />
           <input
-            class="modal__input"
+            class="modal__input modal__input_type_description"
             name="description"
             id="profile-description-input"
             placeholder="Description"
@@ -70,7 +71,35 @@
         </form>
       </div>
     </div>
-
+<!--- Add Card Modal-->
+    <div class="modal" id="new_card_modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="modal-close-button"
+          type="button"
+        ></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" id="add-card-form">
+          <input
+            class="modal__input modal__input_type_title"
+            name="title"
+            id="profile-title-input"
+            placeholder="Title"
+            type="text"
+          />
+          <input
+            class="modal__input modal__input_type_url"
+            name="url"
+            id="profile-url-input"
+            placeholder="Image URL"
+            type="text"
+          />
+          <button class="button modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <script defer src="./scripts/index.js"></script>
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
@@ -80,7 +109,5 @@
         </div>
       </li>
     </template>
-
-    <script src="./scripts/index.js"></script>
   </body>
 </html>
