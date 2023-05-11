@@ -84,14 +84,14 @@
           <input
             class="modal__input modal__input_type_title"
             name="title"
-            id="profile-title-input"
+            id="card-title-input"
             placeholder="Title"
             type="text"
           />
           <input
             class="modal__input modal__input_type_url"
             name="url"
-            id="profile-url-input"
+            id="card-url-input"
             placeholder="Image URL"
             type="text"
           />
@@ -99,15 +99,15 @@
         </form>
       </div>
     </div>
-    <script defer src="./scripts/index.js"></script>
     <template id="card-template">
       <li class="card">
-        <img src="" alt="" class="card__image" />
+        <img src="#" alt="#" class="card__image" />
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
     </template>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
