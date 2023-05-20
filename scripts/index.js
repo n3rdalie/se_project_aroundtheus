@@ -46,6 +46,10 @@ const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 
+const imageModal = document.querySelector("#image-modal");
+const modalImage = document.querySelector(".modal__image");
+const modalImageCaption = document.querySelector(".modal__image-caption");
+const modalImageClose = imageModal.querySelector(".modal__close");
 
 const cardTitleInput = document.querySelector("#card-title-input");
 const cardUrlInput = document.querySelector("#card-url-input");
@@ -69,9 +73,21 @@ function getCardElement(cardData) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
 const likeButton = cardElement.querySelector(".card__like-button");
+const deleteButton = cardElement.querySelector(".card__button-delete");
 
 likeButton.addEventListener("click", () => {
   likeButton.classList.toggle("card__like-button_active");
+});
+
+deleteButton.addEventListener("click", () => {
+  cardElement.remove();
+});
+
+cardImageEl.addEventListener("click", () => {
+  openPopup(imageModal);
+  modalImage.src = cardImageEl.src;
+  modalImage.alt = cardImageEl.alt;
+  modalImageCaption.textContent = cardTitleEl.textContent;
 });
 
   cardTitleEl.textContent = cardData.name;
@@ -95,6 +111,7 @@ function handleProfileEditSubmit(e) {
   closeModal(profileEditModal);
 }
 
+
 function handleAddCardSubmit(e) {
   e.preventDefault();
   const cardData = {}
@@ -116,6 +133,7 @@ profileEditButton.addEventListener("click", () => {
 });
 
 
+
 profileCloseButton.addEventListener("click", () =>
   closeModal(profileEditModal)
 );
@@ -131,6 +149,10 @@ addCardCloseButton.addEventListener("click", () => {
   closeModal(addCardModal);
 });
 
+modalImageClose.addEventListener("click", () => {
+  closePopup(imageModal);
+});
+
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
@@ -139,3 +161,4 @@ initialCards.forEach((cardData) => {
 
 
 const likeButtons = document.querySelectorAll(".card__like-button");
+const deleteButtons = document.querySelectorAll(".card__delete-button");
