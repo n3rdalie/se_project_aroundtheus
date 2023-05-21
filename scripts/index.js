@@ -119,6 +119,7 @@ function handleAddCardSubmit(e) {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
   closeModal(newCardModal);
+  addCardForm.reset();
 }
 
 // ====================================================== //
@@ -154,5 +155,5 @@ initialCards.forEach((cardData) => {
   cardListEl.prepend(cardElement);
 });
 
-const likeButtons = document.querySelectorAll(".card__like-button");
-const deleteButtons = document.querySelectorAll(".card__delete-button");
+
+
