@@ -120,6 +120,8 @@
     object-fit: cover;
 }
 
+
+  
 .modal__image-caption {
     font-family: "Inter", Arial, sans-serif;
     font-style: normal;
@@ -133,6 +135,24 @@
 .modal__image-container {
     margin: auto;
     position: relative;
+}
+
+.modal__button_disabled {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+.modal__input_type_error {
+    border-bottom: 1px solid #ff0000;
+  }
+
+.modal__error {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    transition: opacity 0.3s;
+    width: 358px;
 }
 
 @media screen and (max-width: 620px) {

@@ -61,6 +61,8 @@ const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
+ 
+
 // ====================================================== //
 // ==================== /*Functions*/ =================== //
 // ====================================================== //
@@ -120,7 +122,12 @@ function handleAddCardSubmit(e) {
   cardListEl.prepend(cardElement);
   closeModal(newCardModal);
   addCardForm.reset();
+  const inactiveButtonClass = "modal__button_disabled";
+  addCardSaveButton.classList.add(inactiveButtonClass);
+  addCardSaveButton.disabled = true;
 }
+
+
 
 // ====================================================== //
 // ================= /*Event Listeners*/ ================ //
