@@ -158,7 +158,7 @@ function handleProfileEditSubmit(e) {
   closeModal(profileEditModal);
 }
 const addCardSubmitButton =
-addCardForm.querySelector(".modal__buton");
+addCardForm.querySelector(".modal__button");
 
 function handleAddCardSubmit(e) {
   e.preventDefault();
@@ -174,7 +174,6 @@ function handleAddCardSubmit(e) {
   addCardCloseButton.classList.remove(inactiveButtonClass);
   addCardCloseButton.disabled = true;
 }
-
 
 
 
