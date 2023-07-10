@@ -64,7 +64,7 @@ function setEventListeners(formEl, options) {
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
   const submitButton = formEl.querySelector(options.submitButtonSelector);
   inputEls.forEach((inputEl) => {
-    inputEl.addEventListener('input', (e) => {
+    inputEl.addEventListener("input", (e) => {
     checkInputValidity(formEl, inputEl, options);
     toggleButtonState(inputEls, submitButton, options);
   });
@@ -83,7 +83,7 @@ function enableValidation(options) {
   });
 }
 
-const config = {
+const options = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button",
@@ -92,4 +92,4 @@ const config = {
   errorClass: "modal__error",
 };
 
-enableValidation(config);
+enableValidation(options);
