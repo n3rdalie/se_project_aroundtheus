@@ -157,6 +157,8 @@ function handleProfileEditSubmit(e) {
   profileDescription.textContent = profileDescriptionInput.value;
   closeModal(profileEditModal);
 }
+const addCardSubmitButton =
+addCardForm.querySelector(".modal__buton");
 
 function handleAddCardSubmit(e) {
   e.preventDefault();
@@ -167,10 +169,12 @@ function handleAddCardSubmit(e) {
   cardListEl.prepend(cardElement);
   closeModal(newCardModal);
   addCardForm.reset();
+  toggleButtonState([cardTitleInput, cardUrlInput], addCardSubmitButton, options)
   const inactiveButtonClass = "modal__button_disabled";
   addCardCloseButton.classList.remove(inactiveButtonClass);
   addCardCloseButton.disabled = true;
 }
+
 
 
 
