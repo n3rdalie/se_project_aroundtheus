@@ -172,7 +172,7 @@ function handleAddCardSubmit(e) {
   toggleButtonState([cardTitleInput, cardUrlInput], addCardSubmitButton, options)
   const inactiveButtonClass = "modal__button_disabled";
   addCardCloseButton.classList.remove(inactiveButtonClass);
-  addCardCloseButton.disabled = true;
+  
 }
 
 
