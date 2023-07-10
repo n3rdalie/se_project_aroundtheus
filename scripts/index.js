@@ -80,7 +80,7 @@ const closeButtons = document.querySelectorAll(".modal__close");
 
 function closeByEscape(evt) {
   if (evt.key === "Escape") {
-    const openedModal = document.querySelector(".modal__opened");
+    const openedModal = document.querySelector(".modal_opened");
     closeModal(openedModal);
   }
 }
@@ -168,7 +168,7 @@ function handleAddCardSubmit(e) {
   closeModal(newCardModal);
   addCardForm.reset();
   const inactiveButtonClass = "modal__button_disabled";
-  addCardCloseButton.classList.add(inactiveButtonClass);
+  addCardCloseButton.classList.remove(inactiveButtonClass);
   addCardCloseButton.disabled = true;
 }
 
