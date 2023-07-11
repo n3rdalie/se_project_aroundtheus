@@ -35,20 +35,17 @@ function hasInvalidInput(inputList) {
 }
 //disable button
 function disableButton(inputEls, submitButton, inactiveButtonClass) {
-  if (hasInvalidInput(inputEls)) {
     submitButton.classList.add(inactiveButtonClass);
     submitButton.disabled = true;
     return;
-  }
 }
 
 //enable button
 function enableButton(inputEls, submitButton, inactiveButtonClass) {
-  if (!hasInvalidInput([...inputEls])) {
     submitButton.classList.remove(inactiveButtonClass);
     submitButton.disabled = false;
   }
-}
+
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   if (hasInvalidInput(inputEls)) {

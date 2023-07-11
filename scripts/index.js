@@ -171,7 +171,7 @@ function handleAddCardSubmit(e) {
   addCardForm.reset();
   toggleButtonState([cardTitleInput, cardUrlInput], addCardSubmitButton, options)
   const inactiveButtonClass = "modal__button_disabled";
-  addCardCloseButton.classList.remove(inactiveButtonClass);
+  
   
 }
 
@@ -186,9 +186,6 @@ profileEditButton.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-profileCloseButton.addEventListener("click", () =>
-  closeModal(profileEditModal)
-);
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 addCardForm.addEventListener("submit", handleAddCardSubmit);
@@ -197,13 +194,7 @@ addNewCardButton.addEventListener("click", () => {
   openModal(newCardModal);
 });
 
-addCardCloseButton.addEventListener("click", () => {
-  closeModal(addCardModal);
-});
 
-modalImageClose.addEventListener("click", () => {
-  closeModal(imageModal);
-});
 
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
